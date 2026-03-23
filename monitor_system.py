@@ -9,6 +9,10 @@ def monitor_system(temperature, pressure, humidity):
         return "System normal"
 
 
-# Example test
-result = monitor_system(30, 0, 60)
+# Input del usuario
+temperature = float(input("Ingresa la temperatura: "))
+pressure = float(input("Ingresa la presión: "))
+humidity = float(input("Ingresa la humedad: "))
+
+result = monitor_system(temperature, pressure, humidity)
 print(result)
