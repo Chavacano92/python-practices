@@ -1,6 +1,3 @@
-
-# Basic Monitoring System
-
 def monitor_system(temperature, pressure, humidity):
     if temperature == 0 and pressure == 0 and humidity == 0:
         return "System inactive"
