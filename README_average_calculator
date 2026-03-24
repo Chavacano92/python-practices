@@ -1,0 +1,11 @@
+# Average Calculator (Python)
+
+This program calculates the average grade of a group of students using a while loop.
+
+## Features
+- Dynamic number of students
+- Uses accumulator and counter logic
+- Input-based interaction
+
+## How to run
+python average_calculator.py
