@@ -1,0 +1,101 @@
+"""
+Autor: Manuel Silva
+Aplicación para practicar cálculo mental
+
+Se definen Suma,resta,multiplicacion y la opcion salir
+1.➕suma
+1.1 se define un ciclo de 5 y se van contando aciertos si contesta 5 ejercicios correctamente se guarda su nombre en el salon de la fama
+2. ➖resta
+2.1 crear un ciclo de 5 ejercicios
+2.2 en este caso no se deja avanzar hasta que la operacion sea correcta
+3.✖multiplicacion
+3.1 Presentar un ciclo de 10 ejercicios con operacion de un digito
+3.1 evaluar si la rspuesta es correcta o incorrecta
+3.2 al final mostarar un mensaje motivacional, depeciento del resultado
+4. 🚪Salir
+4.1 El programa se finaliza cuando se seleccion la opcion 4 de salir
+"""
+import random
+
+while True:
+    print("""
+         M E N U :
+         ----------------------
+         
+        1. ➕ Suma
+        2. ➖ Resta
+        3. ✖️ Multiplicación
+        4. 🚪 Salir
+    """)
+
+    menu = input("Indique qué función deseas usar: ")
+
+    # 🔹 SUMA
+    if menu == "1":
+        aciertos = 0
+        for i in range(5):
+            num1 = random.randint(1, 9)
+            num2 = random.randint(1, 9)
+
+            respuesta = int(input(f"{num1} + {num2} = "))
+
+            if respuesta == num1 + num2:
+                print("Correcto ✅")
+                aciertos += 1
+            else:
+                print("Incorrecto ❌")
+
+        print(f"Aciertos: {aciertos}")
+        if aciertos==5:                
+                nombre=input("¡Perfecto! Ingresa tu nombre para el salón de la fama: ")
+                print(f"{nombre} está en el salón de la fama 🏆")
+
+
+    # 🔹 RESTA
+    elif menu == "2":
+        for i in range(5):
+            num1 = random.randint(10, 99)
+            num2 = random.randint(1, 9)
+
+            correcto = num1 - num2
+            respuesta = int(input(f"{num1} - {num2} = "))
+            while respuesta != correcto:
+                respuesta = int(input(f"{num1} - {num2} = "))
+                if respuesta != correcto:
+                    print("Incorrecto, intenta otra vez ❌")
+
+            print("Correcto ✅")
+
+    # 🔹 MULTIPLICACIÓN
+    elif menu == "3":
+        aciertos = 0
+
+        for i in range(10):
+            num1 = random.randint(1, 9)
+            num2 = random.randint(1, 9)
+
+            respuesta = int(input(f"{num1} x {num2} = "))
+
+            if respuesta == num1 * num2:
+                print("Correcto ✅")
+                aciertos += 1
+            else:
+                print("Incorrecto ❌")
+
+        # Evaluación
+        if aciertos <= 3:
+            print("Sigue practicando 💪")
+        elif aciertos <= 7:
+            print("Vas bien 👍")
+        else:
+            print("Excelente trabajo 🔥")
+
+        print(f"Total de aciertos: {aciertos}")
+
+    # 🔹 SALIR
+    elif menu == "4":
+        print("Elegiste SALIR, gracias por usar este programa")
+        break
+
+    else:
+        print("Opción no válida ❌")
