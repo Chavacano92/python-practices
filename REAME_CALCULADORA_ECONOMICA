@@ -1,0 +1,14 @@
+# Calculadora Económica en Python
+
+Proyecto desarrollado en Python que permite:
+
+- Calcular interés simple
+- Calcular valor futuro de una inversión
+- Calcular punto de equilibrio
+- Mostrar resultados con formato
+
+## Tecnologías
+- Python
+
+## Autor
+Manuel Silva
