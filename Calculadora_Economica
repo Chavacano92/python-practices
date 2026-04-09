@@ -1,0 +1,77 @@
+'''
+@Manuel Silva
+Ejercicio: Calculadora Económica con Cálculos Detallados 
+
+'''
+
+def calcular_interes_simple(c, r, t):
+    res = c * r * t
+    return res
+
+def calcular_valor_futuro(c, i, n):
+    res = c * (1 + i) ** n
+    return res
+
+def calcular_punto_equilibrio(cf, p, cv):
+    res = cf / (p - cv)
+    return res
+
+
+def imprimir_con_formato(nombre, valor):
+    print("---------------------------------------")
+    print(f"RESULTADO DE:{nombre}")
+    print(f"EL VALOR ES: ${valor}")
+    print("---------------------------------------")
+
+
+def main():
+    opcion = ""
+    ultimo_resultado = 0
+    nombre_calculo = "Ninguno"
+
+    while opcion != "5":
+        print("M E N U :")
+        print("1. Interés Simple")
+        print("2. Valor Futuro")
+        print("3. Punto de Equilibrio")
+        print("4. Imprimir con Formato")
+        print("5. Salir")
+        
+        opcion = input("Selecciona una opcion: ")
+
+        if opcion == "1":
+            c = float(input("Capital: "))
+            r = float(input("Tasa (ej. 0.05): "))
+            t = float(input("Tiempo: "))
+            ultimo_resultado = calcular_interes_simple(c, r, t)
+            nombre_calculo = "INTERÉS SIMPLE"
+            print("¡Calculado con éxito!")
+
+        elif opcion == "2":
+            c = float(input("Capital Inicial: "))
+            i = float(input("Tasa: "))
+            n = float(input("Periodos: "))
+            ultimo_resultado = calcular_valor_futuro(c, i, n)
+            nombre_calculo = "VALOR FUTURO"
+            print("¡Calculado con éxito!")
+
+        elif opcion == "3":
+            cf = float(input("Costos fijos: "))
+            p = float(input("Precio: "))
+            cv = float(input("Costo variable: "))
+            ultimo_resultado = calcular_punto_equilibrio(cf, p, cv)
+            nombre_calculo = "PUNTO DE EQUILIBRIO"
+            print("¡Calculado con éxito!")
+
+        elif opcion == "4":
+          
+            imprimir_con_formato(nombre_calculo, ultimo_resultado)
+
+        elif opcion == "5":
+            print("Adiós, gracias por usar mi programa.")
+        
+        else:
+            print("Opción no válida.")
+
+
+main()
