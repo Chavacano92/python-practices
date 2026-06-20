@@ -1,0 +1,27 @@
+"""
+@Autor: Manuel Salvador Silva Orozco
+@Version: 1.0
+@Email:
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. Generamos nuestros 100 puntos suaves (¡tu idea original es mejor!)
+x = np.linspace(-5, 5, 100)
+
+# 2. Usamos el ciclo for para que la variable 'potencia' valga 2, 3, 4, 5 y 6
+for potencia in range(2, 7):
+    y_calculada = x ** potencia
+
+    # Graficamos y le ponemos una etiqueta dinámica a cada línea
+    plt.plot(x, y_calculada, label=f"x^{potencia}")
+
+# 3. Agregamos los detalles visuales de tu compañero
+plt.axhline(0, color='black', linestyle='--')  # Dibuja el Eje X central
+plt.axvline(0, color='black', linestyle='--')  # Dibuja el Eje Y central
+plt.grid(True)  # Enciende la cuadrícula
+plt.legend()  # Muestra la caja con los nombres de las líneas
+plt.title("Gráfica de Potencias")
+
+# 4. Mostramos el resultado final
+plt.show()
