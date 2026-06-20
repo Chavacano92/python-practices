@@ -1,0 +1,19 @@
+Markdown
+# Gráfica de Potencias con Matplotlib y NumPy 📈
+
+## Descripción
+Este script de Python es un ejercicio práctico de visualización de datos que genera y grafica múltiples funciones polinomiales ($x^2, x^3, x^4, x^5, x^6$) dentro de un mismo plano cartesiano. 
+
+El código demuestra cómo automatizar el trazado de múltiples líneas matemáticas utilizando un ciclo `for`, optimizando la escritura del código y manteniendo una presentación visual limpia.
+
+## Tecnologías Utilizadas
+* **Python 3**
+* **NumPy:** Utilizado para la generación eficiente de un arreglo de 100 puntos espaciados uniformemente mediante la función `linspace`, garantizando que las curvas se dibujen de manera suave y continua.
+* **Matplotlib (`pyplot`):** Utilizado para el renderizado de la gráfica, la configuración de los ejes y la personalización visual.
+
+## Requisitos e Instalación
+
+Para ejecutar este código, necesitas tener Python instalado en tu sistema junto con las bibliotecas correspondientes. Puedes instalar las dependencias abriendo tu terminal y ejecutando el siguiente comando:
+
+```bash
+pip install numpy matplotlib
