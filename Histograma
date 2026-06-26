@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+calificaciones = np.random.normal(loc=70, scale=10, size=1000)
+
+fig = plt.figure(figsize=(9,6))
+ax1 = fig.add_subplot(1,1,1)
+
+# Crear histograma
+# bins = Número de barras o intervalos
+# color = Relleno de las barras
+# edgecolor = color de borde de las barras
+# alpha = nivel de transparencia
+ax1.hist(calificaciones, bins=30 , color='royalblue', edgecolor='black', alpha=0.7)
+ax1.set_title("Distribució de Calificaciones de exámen", fontsize=16, fontweight='bold')
+ax1.set_xlabel("Calificaciones", fontsize=12)
+ax1.set_ylabel("Frecuencia (No. estudiantes)", fontsize=12)
+
+ax1.grid(axis='y', linestyle='--', alpha=0.6)
+fig.tight_layout()
+plt.show()
